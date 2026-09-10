@@ -1,0 +1,10 @@
+{
+    "order": 9,
+    "name": "Inventory Verification (Legacy)",
+    "description": "The original inventory verification tool, kept here for reference and older audit files.",
+    "category": "inventory",
+    "icon": "fa-solid fa-box-archive",
+    "version": "1.0",
+    "featured": false,
+    "status": "active"
+}

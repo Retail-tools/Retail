@@ -1,0 +1,10 @@
+{
+    "order": 3,
+    "name": "Invoice Receivable Calculator",
+    "description": "Calculate invoice receivables, GST, TDS and outstanding payment values.",
+    "category": "finance",
+    "icon": "fa-solid fa-file-invoice-dollar",
+    "version": "1.0",
+    "featured": true,
+    "status": "active"
+}

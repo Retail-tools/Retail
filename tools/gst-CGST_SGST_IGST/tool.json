@@ -1,0 +1,10 @@
+{
+    "order": 7,
+    "name": "GST Calculator (CGST / SGST / IGST)",
+    "description": "Calculate GST with separate CGST, SGST and IGST breakup.",
+    "category": "gst",
+    "icon": "fa-solid fa-receipt",
+    "version": "1.0",
+    "featured": true,
+    "status": "active"
+}

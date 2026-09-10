@@ -1,0 +1,10 @@
+{
+    "order": 8,
+    "name": "GST Calculator",
+    "description": "Calculate GST values for inclusive and exclusive amounts.",
+    "category": "gst",
+    "icon": "fa-solid fa-percent",
+    "version": "1.0",
+    "featured": false,
+    "status": "active"
+}

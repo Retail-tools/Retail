@@ -1,0 +1,10 @@
+{
+    "order": 4,
+    "name": "ProTEAM Audit Intelligence",
+    "description": "Turn a retail store stock-audit Excel file into a branded dashboard and a polished PPT report in minutes.",
+    "category": "excel",
+    "icon": "fa-solid fa-store",
+    "version": "1.0",
+    "featured": true,
+    "status": "active"
+}

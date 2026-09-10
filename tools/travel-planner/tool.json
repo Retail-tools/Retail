@@ -1,0 +1,10 @@
+{
+    "order": 10,
+    "name": "Travel Planner",
+    "description": "Plan outstation work travel — routes, stops and schedule in one place.",
+    "category": "utilities",
+    "icon": "fa-solid fa-route",
+    "version": "1.0",
+    "featured": false,
+    "status": "active"
+}

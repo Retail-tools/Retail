@@ -1,0 +1,9 @@
+{
+    "name": "Your Tool Name",
+    "description": "One or two sentences describing what this tool does.",
+    "category": "audit",
+    "icon": "fa-solid fa-wrench",
+    "version": "1.0",
+    "featured": false,
+    "status": "active"
+}

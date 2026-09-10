@@ -1,0 +1,10 @@
+{
+    "order": 6,
+    "name": "Profitability Analysis",
+    "description": "Analyse profitability reports and surface margin trends at a glance.",
+    "category": "finance",
+    "icon": "fa-solid fa-sack-dollar",
+    "version": "1.0",
+    "featured": true,
+    "status": "active"
+}

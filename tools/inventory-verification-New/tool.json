@@ -1,0 +1,10 @@
+{
+    "order": 1,
+    "name": "Inventory Verification",
+    "description": "Barcode-level inventory verification with quantity validation and reconciliation support — rebuilt faster and more accurate.",
+    "category": "inventory",
+    "icon": "fa-solid fa-barcode",
+    "version": "2.0",
+    "featured": true,
+    "status": "active"
+}

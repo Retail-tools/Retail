@@ -1,0 +1,10 @@
+{
+    "order": 5,
+    "name": "ProTEAM ReportIQ",
+    "description": "Turn a hospital stock-audit Excel file into a branded dashboard and a polished PPT report in minutes.",
+    "category": "excel",
+    "icon": "fa-solid fa-hospital",
+    "version": "1.0",
+    "featured": true,
+    "status": "active"
+}

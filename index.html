@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Audit HUB Pro | India's Retail Operations Toolkit</title>
+    <meta name="description" content="Enterprise toolkit for Retail Operations, Inventory Audits, Finance, GST, HR, MIS and Utilities.">
+    <meta name="author" content="Vicky Shaw">
+
+    <!-- Favicon -->
+    <link rel="icon" href="assets/images/favicon.png">
+
+    <!-- Theme: set before first paint to avoid a flash of the wrong theme -->
+    <script>
+        (function () {
+            var saved = localStorage.getItem("ahp-theme");
+            var theme = saved || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+            document.documentElement.setAttribute("data-theme", theme);
+        })();
+    </script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+<body>
+
+<!-- ==========================================
+        TOP BAR
+========================================== -->
+<div class="topbar">
+    <div class="wrap topbar-inner">
+
+        <div class="brand">
+            <img src="assets/images/logo-mark.png" alt="Audit HUB Pro logo">
+            <div class="brand-name">
+                Audit HUB Pro
+                <span>Retail Operations Toolkit</span>
+            </div>
+        </div>
+
+        <div class="topbar-meta">
+            <a href="about.html" class="nav-link"><i class="fa-solid fa-user"></i> About</a>
+            <span class="chip"><span class="dot"></span> v<span id="topVersion"></span> Live</span>
+            <span class="chip"><i class="fa-solid fa-toolbox"></i>&nbsp;<span data-stat="total">0</span> Tools</span>
+            <button id="themeToggle" class="theme-toggle" title="Toggle dark mode" aria-label="Toggle dark mode">
+                <i class="fa-solid fa-moon"></i>
+                <i class="fa-solid fa-sun"></i>
+            </button>
+        </div>
+
+    </div>
+</div>
+
+<!-- ==========================================
+        HERO
+========================================== -->
+<header class="hero">
+    <div class="wrap hero-grid">
+
+        <div>
+            <div class="eyebrow">Audit HUB Pro &middot; Built by Vicky Shaw</div>
+
+            <h1>India's Retail Operations Toolkit</h1>
+
+            <p class="hero-lede">
+                A single desk for <strong>inventory audits</strong>, <strong>GST</strong> and
+                <strong>invoice</strong> calculations, and <strong>supervision reporting</strong> —
+                built for the way retail audits actually get done, one file at a time.
+            </p>
+
+            <div class="search-wrap">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" id="search" placeholder="Search tools, calculators, categories&hellip;">
+            </div>
+            <div class="search-hint">Press <kbd>Ctrl</kbd> + <kbd>K</kbd> to search &middot; <kbd>Esc</kbd> to clear</div>
+        </div>
+
+        <div class="hero-visual" aria-hidden="true">
+            <div class="hero-visual-head">
+                <span>Toolkit Snapshot</span>
+                <span class="live-dot">Live</span>
+            </div>
+
+            <div class="snapshot-row">
+                <div class="snapshot-icon"><i class="fa-solid fa-boxes-stacked"></i></div>
+                <div class="snapshot-body">
+                    <div class="snapshot-label">Inventory accuracy</div>
+                    <div class="snapshot-bar"><span data-fill="94" style="width:94%"></span></div>
+                </div>
+                <div class="snapshot-value">94%</div>
+            </div>
+
+            <div class="snapshot-row snapshot-row--blue">
+                <div class="snapshot-icon"><i class="fa-solid fa-file-invoice-dollar"></i></div>
+                <div class="snapshot-body">
+                    <div class="snapshot-label">Invoices reconciled</div>
+                    <div class="snapshot-bar"><span data-fill="78" style="width:78%"></span></div>
+                </div>
+                <div class="snapshot-value">78%</div>
+            </div>
+
+            <div class="snapshot-row snapshot-row--amber">
+                <div class="snapshot-icon"><i class="fa-solid fa-receipt"></i></div>
+                <div class="snapshot-body">
+                    <div class="snapshot-label">GST filings ready</div>
+                    <div class="snapshot-bar"><span data-fill="100" style="width:100%"></span></div>
+                </div>
+                <div class="snapshot-value">100%</div>
+            </div>
+        </div>
+
+    </div>
+</header>
+
+<!-- ==========================================
+        STATS STRIP
+========================================== -->
+<section class="stats-strip">
+    <div class="wrap stats-row">
+
+        <div class="stat-cell">
+            <i class="fa-solid fa-toolbox"></i>
+            <div>
+                <h3 data-stat="total">0</h3>
+                <p>Total Tools</p>
+            </div>
+        </div>
+
+        <div class="stat-cell">
+            <i class="fa-solid fa-layer-group"></i>
+            <div>
+                <h3 data-stat="categories">0</h3>
+                <p>Categories</p>
+            </div>
+        </div>
+
+        <div class="stat-cell">
+            <i class="fa-solid fa-code-branch"></i>
+            <div>
+                <h3 id="statVersion"></h3>
+                <p>Current Version</p>
+            </div>
+        </div>
+
+        <div class="stat-cell">
+            <i class="fa-solid fa-lock-open"></i>
+            <div>
+                <h3>100%</h3>
+                <p>Free to Use</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- ==========================================
+        MAIN
+========================================== -->
+<main class="wrap">
+
+    <!-- Category filter -->
+    <div class="categories" id="categoryBar"></div>
+
+    <!-- Featured -->
+    <div id="featuredBlock">
+        <div class="section-title">
+            <h2><i class="fa-solid fa-star" style="color:var(--amber);font-size:16px;"></i>&nbsp; Featured Tools</h2>
+            <p>Frequently used for retail operations & inventory audits</p>
+        </div>
+        <div class="cards" id="featuredGrid"></div>
+    </div>
+
+    <!-- All tools -->
+    <div class="section-title">
+        <h2>All Applications</h2>
+        <p>Browse every utility on file</p>
+    </div>
+    <div class="cards" id="allGrid"></div>
+
+    <div id="noResults" class="hidden">
+        <i class="fa-solid fa-circle-exclamation"></i>
+        <h3>No tool found</h3>
+        <p>Try another keyword or category.</p>
+    </div>
+
+</main>
+
+<!-- ==========================================
+        FOOTER
+========================================== -->
+<footer>
+    <div class="wrap footer-inner">
+
+        <div class="footer-brand">
+            <img src="assets/images/logo-mark.png" alt="Audit HUB Pro logo">
+            <p>
+                A working toolkit for retail operations, inventory audits, GST and
+                finance calculations — built and maintained for day-to-day audit work.
+            </p>
+        </div>
+
+        <div class="footer-col">
+            <h4>Coverage</h4>
+            <ul>
+                <li>Inventory Audit</li>
+                <li>Finance</li>
+                <li>GST</li>
+                <li>Supervision & MIS</li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Toolkit</h4>
+            <ul id="footerToolLinks"></ul>
+        </div>
+
+    </div>
+
+    <div class="wrap footer-bottom">
+        <span>&copy; <span id="currentYear"></span> Audit HUB Pro. All rights reserved.</span>
+        <span>Designed &amp; developed by <strong>Vicky Shaw</strong></span>
+    </div>
+</footer>
+
+<!-- ==========================================
+        SCROLL TO TOP
+========================================== -->
+<button id="scrollTop" class="scroll-top" title="Back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+</button>
+
+<!-- ==========================================
+        JAVASCRIPT
+========================================== -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="data/tools.js"></script>
+<script src="assets/js/script.js"></script>
+<script src="assets/js/theme.js"></script>
+<script src="assets/js/motion.js"></script>
+<script>
+    document.getElementById("topVersion").textContent = appConfig.version;
+    document.getElementById("statVersion").textContent = "v" + appConfig.version;
+
+    const footerLinks = document.getElementById("footerToolLinks");
+    tools.forEach(tool => {
+        const li = document.createElement("li");
+        li.innerHTML = `<a href="${getToolURL(tool)}">${tool.name}</a>`;
+        footerLinks.appendChild(li);
+    });
+</script>
+
+</body>
+</html>

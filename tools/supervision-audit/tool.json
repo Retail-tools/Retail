@@ -1,0 +1,10 @@
+{
+    "order": 2,
+    "name": "Supervision Audit Tool",
+    "description": "Perform supervision audits with structured observations and reporting.",
+    "category": "audit",
+    "icon": "fa-solid fa-clipboard-check",
+    "version": "1.0",
+    "featured": true,
+    "status": "active"
+}
