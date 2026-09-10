@@ -5,6 +5,6 @@
     "category": "utilities",
     "icon": "fa-solid fa-route",
     "version": "1.0",
-    "featured": false,
+    "featured": true,
     "status": "active"
 }
